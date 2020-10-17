@@ -27,7 +27,7 @@ public class DBConf {
     @Bean(name = "sessionFactory")
     public SessionFactory sessionFactory(DataSource dataSource) throws Exception {
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
-        vendorAdapter.setDatabase(Database.ORACLE);
+        vendorAdapter.setDatabase(Database.MYSQL);
         vendorAdapter.setGenerateDdl(false);
         LocalSessionFactoryBean factoryBean = new LocalSessionFactoryBean();
         factoryBean.setPackagesToScan("com.equifax.dev");
